@@ -15,30 +15,9 @@ inputs:
       type: number
       default: 80
       description: The port on which the application is listening for requests.
-    BuildCmd:
-      type: string
-      placeholder: build
-      description: Build script for your app (eg. build)
-    BuildDir:
-      type: string
-      placeholder: build
-      description: Build directory (eg. dst)
-    AppType:
-      type: enum
-      enum:
-        - nodejs
-        - java
-        - strapi
-        - nextjs
-        - reactjs
-        - angularjs
-        - vuejs
-      default: nodejs
-      description: Type of application
   required:
     - AppName
     - Port
-    - AppType
 
 service:
   "{{AppName}}":
